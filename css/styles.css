@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 0.7rem;   
 }
 
-.header{
+.header--index{
     position: relative;
     height: 100vh;    
 }
@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb{
     width: 50%;
 }
 
-.header__logo{
+.header__logo--index{
     position: absolute;
     width: 7rem;
     height: 5rem;
@@ -110,7 +110,7 @@ body::-webkit-scrollbar-thumb{
     100%{bottom: 5%;}
 }
 
-.main{
+.main--index{
     min-height: 120vh;
     background-color: rgb(43, 43, 51);
     color: #fff;
@@ -122,11 +122,6 @@ body::-webkit-scrollbar-thumb{
     justify-content: center;
     height: 10rem;
     margin-bottom: 3rem;
-}
-
-.main__trabajos__div{
-    height: 10rem;
-    border: solid 2px #fff;
 }
 
 .main__trabajos__varios, .main__trabajos__armarios, .main__trabajos__cocinas{
@@ -195,7 +190,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 0.7rem;   
 }
 
-.footer{
+.footer--index{
     height: 30rem;
     padding: 2rem;
     background-image: url(../media/madera.jpeg);
@@ -206,7 +201,7 @@ body::-webkit-scrollbar-thumb{
     text-shadow: 2px 2px black;
 }
 
-.footer__datos{
+.footer__datos--index{
     margin-top: 3rem;
 }
 
@@ -238,16 +233,16 @@ body::-webkit-scrollbar-thumb{
         width: 100%;
     }
 
-    .header__logo:hover{
-        color: #fff;
-        animation: rotar 0.4s ease-in-out;
-    }
-    
-    @keyframes rotar {
-        0% {transform: rotateY(0deg);}
-        50% {transform: rotateY(180deg);}
-        100% {transform: rotateY(360deg);}
-    }
+    .header__logo--index:hover{
+    color: #fff;
+	animation: rotar 0.4s ease-in-out;
+}
+
+@keyframes rotar {
+    0% {transform: rotateY(0deg);}
+    50% {transform: rotateY(180deg);}
+    100% {transform: rotateY(360deg);}
+}
     
     .main__card{
         display: flex;
@@ -255,7 +250,7 @@ body::-webkit-scrollbar-thumb{
         align-items: center;
     }
 
-    .footer{
+    .footer--index{
         display: flex;
         justify-content: space-around;
         align-items: center;
