@@ -236,6 +236,10 @@ body::-webkit-scrollbar-thumb{
     min-height: calc(100vh - 23rem);
 }
 
+.main__equipo{
+    min-height: 40rem;
+}
+
 .footer{
     height: 13rem;
     background-color: rgb(43, 43, 51);
