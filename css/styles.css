@@ -302,6 +302,7 @@ body::-webkit-scrollbar-thumb{
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 10rem;
     }
     
     .header__item::before, .header__nav__desk__item::before{
