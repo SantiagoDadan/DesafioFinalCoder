@@ -251,6 +251,10 @@ body::-webkit-scrollbar-thumb{
     overflow: hidden;
 }
 
+.main__contacto__form{
+    width: 95%;
+}
+
 @media  screen and (min-width: 320px) {
 
     .header{
@@ -271,6 +275,10 @@ body::-webkit-scrollbar-thumb{
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .main__contacto__form{
+        width: 130%;
     }
     
 }
@@ -344,6 +352,10 @@ body::-webkit-scrollbar-thumb{
 
     .main__slider{
         width: 75%;
+    }
+
+    .main__contacto__form{
+        width: 60%;
     }
     
 }
