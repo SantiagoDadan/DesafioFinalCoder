@@ -6,8 +6,8 @@
 
 body{
     text-align: center;
-    overflow-x: hidden;
     font-family: 'Merriweather Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -36,18 +36,6 @@ body::-webkit-scrollbar-thumb{
     z-index: -1;
 }
 
-.header__transparent{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: #363636;
-    opacity: 0.55;
-    z-index: -1;
-    box-shadow: 5px 5px 5px gray;
-}
-
 .header__content{
     position: absolute;
     top: 30%;
@@ -60,6 +48,7 @@ body::-webkit-scrollbar-thumb{
     color: #fff;
     text-shadow: 2px 2px black;
     z-index: 2;
+    
 }
 
 .header__titulo{
@@ -110,6 +99,7 @@ body::-webkit-scrollbar-thumb{
     min-height: 120vh;
     background-color: rgb(43, 43, 51);
     color: #fff;
+    overflow-x: hidden;
 }
 
 .main__tituloTrabajos{
@@ -195,6 +185,7 @@ body::-webkit-scrollbar-thumb{
     color: #fff;
     font-size: 1.34rem;
     text-shadow: 2px 2px black;
+    
 }
 
 .footer__datos--index{
