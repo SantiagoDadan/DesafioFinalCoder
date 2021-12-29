@@ -7,6 +7,7 @@
 body{
     text-align: center;
     overflow-x: hidden;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 body::-webkit-scrollbar{
@@ -21,7 +22,8 @@ body::-webkit-scrollbar-thumb{
 
 .header--index{
     position: relative;
-    height: 100vh;    
+    height: 100vh;  
+    font-family: 'Cinzel', serif;  
 }
 
 .header__video{
@@ -204,6 +206,7 @@ body::-webkit-scrollbar-thumb{
     height: 10rem;
     overflow-x: hidden;
     background-color: rgb(43, 43, 51);
+    font-family: 'Cinzel', serif;
 }
 
 .header__nav__div{
@@ -283,6 +286,7 @@ body::-webkit-scrollbar-thumb{
 
     .header__nav__desk__list{
         list-style: none;
+        font-family: 'Cinzel', serif;
     }
 
     .header__nav__mobile{
