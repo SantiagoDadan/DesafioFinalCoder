@@ -16,35 +16,85 @@
 
   <body>
 
-    <header>
+    <header class="header container-fluid">
 
         <a href="../index.html" class="header__logo">WD</a>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent header__nav">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link text-white" href="../index.html"><span class="header__item">Home</span></a>
-                  <a class="nav-link text-white" href="../secciones/quienesSomos.html"><span class="header__item">Quienes somos</span></a>
-                  <a class="nav-link text-white" href="../secciones/equipo.html"><span class="header__item">Equipo</span></a>
-                  <a class="nav-link text-white" href="../secciones/trabajos.html"><span class="header__item">Trabajos</span></a>
-                  <a class="nav-link text-white" href="#"><span class="header__item">Contacto</span></a>
+        <div class="header__nav__div container-fluid d-flex align-items-center">
+
+            <nav class="navbar navbar-dark bg-transparent header__nav__mobile">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header text-white">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                      <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-3">
+                        <li class="nav-item p-2">
+                          <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item p-2">
+                          <a class="nav-link" href="../secciones/quienesSomos.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="../secciones/equipo.html">Equipo</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="../secciones/trabajos.html">Trabajos</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="../secciones/contacto.html">Contacto</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-        </nav>
+              </nav>
+
+        </div>
+
+        <div class="header__nav__div container-fluid d-flex align-items-center justify-content-center">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent header__nav__desk">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link text-white" href="../index.html"><span class="header__item">Home</span></a>
+                      <a class="nav-link text-white" href="../secciones/quienesSomos.html"><span class="header__item">Quienes somos</span></a>
+                      <a class="nav-link text-white" href="../secciones/equipo.html"><span class="header__item">Equipo</span></a>
+                      <a class="nav-link text-white" href="#"><span class="header__item">Trabajos</span></a>
+                      <a class="nav-link text-white" href="../secciones/contacto.html"><span class="header__item">Contacto</span></a>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+
+        </div>         
 
     </header>
 
-    <main>
+    <main class="main">
 
 
     </main>
 
-    <footer>
+    <footer class="footer container-fluid d-flex align-items-center justify-content-around">
+
+        <div class="row">
+            <div class="footer__datos col-lg-12 fs-5 d-flex flex-column flex-lg-row text-white">
+                <p class="footer__info p-lg-5">Tel: (0223) 123-4567</p>
+                <p class="footer__info p-lg-5">info@unmail.com</p>
+                <p class="footer__info p-lg-5">Una calle 1234</p>
+                <p class="footer__info p-lg-5">Mar del Plata</p>
+            </div>
+        </div>
 
 
     </footer>

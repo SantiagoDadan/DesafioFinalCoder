@@ -46,11 +46,16 @@ body::-webkit-scrollbar-thumb{
     box-shadow: 5px 5px 5px gray;
 }
 
-.header__nav{
+.header__nav, .header__nav__desk{
     height: 10rem;
     font-size: 1.5rem;
     text-shadow: 2px 2px black;
+    background-color: rgb(43, 43, 51);
     z-index: 2;
+}
+
+.header__nav__desk{
+    display: none;
 }
 
 .header__content{
@@ -205,6 +210,36 @@ body::-webkit-scrollbar-thumb{
     margin-top: 3rem;
 }
 
+.header{
+    position: relative;
+    height: 10rem;
+    overflow-x: hidden;
+    background-color: rgb(43, 43, 51);
+}
+
+.header__nav__div{
+    height: 100%;
+}
+
+.header__logo{
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 2px 2px black;
+}
+
+.main{
+    min-height: calc(100vh - 23rem);
+}
+
+.footer{
+    height: 13rem;
+    background-color: rgb(43, 43, 51);
+}
+
 @media  screen and (min-width: 768px) {
 
     .header__content{
@@ -227,23 +262,7 @@ body::-webkit-scrollbar-thumb{
         background-color: #fff;
         transition: all 0.2s;
     }
-    
-    .header__item:hover::before{
-        left: 0;
-        width: 100%;
-    }
 
-    .header__logo--index:hover{
-    color: #fff;
-	animation: rotar 0.4s ease-in-out;
-}
-
-@keyframes rotar {
-    0% {transform: rotateY(0deg);}
-    50% {transform: rotateY(180deg);}
-    100% {transform: rotateY(360deg);}
-}
-    
     .main__card{
         display: flex;
         justify-content: center;
@@ -255,11 +274,46 @@ body::-webkit-scrollbar-thumb{
         justify-content: space-around;
         align-items: center;
     }
+    
 }
 
-@media  screen and (max-width: 375px){
+@media screen and (min-width: 1024px){
 
-    .main__historia--index{
-        height: 35rem;
+    .header__nav__div{
+        height: auto;
     }
+
+    .header__nav__desk{
+        display: flex;
+    }
+
+    .header__nav__mobile{
+        display: none;
+    }
+
+    .header__logo{
+        right: 3%;
+    }
+
+    .header__item:hover::before{
+        left: 0;
+        width: 100%;
+    }
+
+    .header__logo--index:hover{
+        color: #fff;
+	    animation: rotar 0.4s ease-in-out;
+    }
+
+    .header__logo:hover{
+        color: #fff;
+	    animation: rotar 0.4s ease-in-out;
+    }
+
+    @keyframes rotar {
+        0% {transform: rotateY(0deg);}
+        50% {transform: rotateY(180deg);}
+        100% {transform: rotateY(360deg);}
+    }
+    
 }
