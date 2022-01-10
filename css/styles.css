@@ -26,6 +26,10 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Cinzel', serif;  
 }
 
+.header__nav__div{
+    text-shadow: 2px 2px black;
+}
+
 .header__video{
     position: absolute;
     top: 0;
@@ -216,6 +220,12 @@ body::-webkit-scrollbar-thumb{
 
 .main{
     min-height: calc(100vh - 23rem);
+}
+
+.main__trabajos__titulo{
+    background-color: rgb(43, 43, 51);
+    color: #fff;
+    border-radius: 10px;
 }
 
 .main__equipo{
