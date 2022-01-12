@@ -1,0 +1,23 @@
+.footer--index{
+    height: 30rem;
+    padding: 2rem;
+    background-image: url(../media/madera.jpeg);
+    background-size: cover;
+    background-position-y: 35%;
+    color: $colorBlanco;
+    font-size: 1.34rem;
+    text-shadow: $sombraTexto;
+    
+    .footer--index__datos{
+        margin-top: 3rem;
+    }
+}
+
+@media  screen and (min-width: 320px) {
+
+    .footer--index{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }    
+}

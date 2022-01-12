@@ -1,0 +1,89 @@
+.main{
+    min-height: 120vh;
+    background-color: rgb(43, 43, 51);
+    color: $colorBlanco;
+    overflow-x: hidden;
+
+    &__tituloTrabajos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10rem;
+        margin-bottom: 3rem;
+    }
+    
+    &__trabajos__varios, &__trabajos__armarios, &__trabajos__cocinas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 9rem;
+        border: solid 1px $borde-sombraGris;
+        box-shadow: 2px 2px 2px $borde-sombraGris;
+        border-radius: 5px;
+        margin-top: 1rem;
+    }
+    
+    &__trabajos__varios{
+        background-image: url(../media/varios.jpeg);
+        background-size: cover;
+        background-position-y: 60%;
+    }
+    
+    &__trabajos__armarios{
+        background-image: url(../media/armarios.jpeg);
+        background-size: cover;
+        background-position-y: 55%;
+    }
+    
+    &__trabajos__cocinas{
+        background-image: url(../media/cocinas.jpeg);
+        background-size: cover;
+        background-position-y: 73%;
+    }
+    
+    &__trabajos__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $colorBlanco;
+        font-size: 2rem;
+        text-shadow: $sombraTexto;
+        width: 10rem;
+        height: 4rem;
+    }
+    
+    &__trabajos__link:hover{
+        color: $colorBlanco;
+        transition: 0.2s ease;
+        transform: scale(1.2);
+    }
+    
+    &__historia--index{
+        height: 40rem;
+        margin-top: 5rem;
+    }
+    
+    &__card__texto{
+        height: 90%;
+        overflow: scroll;
+    }
+    
+    &__card__texto::-webkit-scrollbar{
+        width: 0.35rem;
+    }
+    
+    &__card__texto::-webkit-scrollbar-thumb{
+        background: rgb(201, 162, 118);
+        border-radius: 0.7rem;   
+    }
+}
+
+@media  screen and (min-width: 320px) {
+
+    .main__card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+}

@@ -1,0 +1,509 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Merriweather Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.4rem;
+  background-color: rgba(245, 171, 86, 0.664);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #aa8963;
+  border-radius: 0.7rem;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  font-family: "Cinzel", serif;
+}
+
+.header__nav__div {
+  text-shadow: 2px 2px black;
+}
+
+.header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.header__content {
+  position: absolute;
+  top: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 10rem;
+  color: #fff;
+  text-shadow: 2px 2px black;
+  z-index: 2;
+}
+
+.header__titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  font-size: 3rem;
+}
+
+.header__p {
+  font-size: 2rem;
+  border-top: 1px solid #fff;
+  width: 50%;
+}
+
+.header__logo--index {
+  position: absolute;
+  width: 7rem;
+  height: 5rem;
+  bottom: 5.5%;
+  left: 5%;
+  text-decoration: none;
+  font-size: 3.1rem;
+  color: #fff;
+  text-shadow: 2px 2px black;
+}
+
+.header__flecha {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 2rem;
+  height: 2rem;
+  border-bottom: solid #fff 5px;
+  border-right: solid #fff 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: salta 1.5s infinite ease-in-out;
+          animation: salta 1.5s infinite ease-in-out;
+  z-index: 2;
+}
+
+@-webkit-keyframes salta {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 7%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+
+@keyframes salta {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 7%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .header__content {
+    margin-top: 15%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__content {
+    top: 25%;
+  }
+  .header__nav__div {
+    height: auto;
+  }
+  .header__nav__desk__list {
+    list-style: none;
+    font-family: "Cinzel", serif;
+  }
+  .header__nav__mobile {
+    display: none;
+  }
+  .header__logo {
+    right: 3%;
+  }
+  .header__item, .header__nav__desk__item {
+    position: relative;
+    margin: 1.5rem;
+  }
+  .header__nav__desk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10rem;
+  }
+  .header__item::before, .header__nav__desk__item::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .header__item:hover::before, .header__nav__desk__item:hover::before {
+    left: 0;
+    width: 100%;
+  }
+  .header__logo--index:hover {
+    color: #fff;
+    -webkit-animation: rotar 0.4s ease-in-out;
+            animation: rotar 0.4s ease-in-out;
+  }
+  @-webkit-keyframes rotar {
+    0% {
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    50% {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @keyframes rotar {
+    0% {
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    50% {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+}
+
+.main {
+  min-height: 120vh;
+  background-color: #2b2b33;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.main__tituloTrabajos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10rem;
+  margin-bottom: 3rem;
+}
+
+.main__trabajos__varios, .main__trabajos__armarios, .main__trabajos__cocinas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 9rem;
+  border: solid 1px #3e3e41;
+  -webkit-box-shadow: 2px 2px 2px #3e3e41;
+          box-shadow: 2px 2px 2px #3e3e41;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.main__trabajos__varios {
+  background-image: url(../media/varios.jpeg);
+  background-size: cover;
+  background-position-y: 60%;
+}
+
+.main__trabajos__armarios {
+  background-image: url(../media/armarios.jpeg);
+  background-size: cover;
+  background-position-y: 55%;
+}
+
+.main__trabajos__cocinas {
+  background-image: url(../media/cocinas.jpeg);
+  background-size: cover;
+  background-position-y: 73%;
+}
+
+.main__trabajos__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px black;
+  width: 10rem;
+  height: 4rem;
+}
+
+.main__trabajos__link:hover {
+  color: #fff;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main__historia--index {
+  height: 40rem;
+  margin-top: 5rem;
+}
+
+.main__card__texto {
+  height: 90%;
+  overflow: scroll;
+}
+
+.main__card__texto::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+.main__card__texto::-webkit-scrollbar-thumb {
+  background: #c9a276;
+  border-radius: 0.7rem;
+}
+
+@media screen and (min-width: 320px) {
+  .main__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer--index {
+  height: 30rem;
+  padding: 2rem;
+  background-image: url(../media/madera.jpeg);
+  background-size: cover;
+  background-position-y: 35%;
+  color: #fff;
+  font-size: 1.34rem;
+  text-shadow: 2px 2px black;
+}
+
+.footer--index .footer--index__datos {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 320px) {
+  .footer--index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header--secciones {
+  position: relative;
+  height: 10rem;
+  overflow-x: hidden;
+  background-color: #2b2b33;
+  font-family: 'Cinzel', serif;
+}
+
+.header__nav__div {
+  height: 100%;
+}
+
+.header__logo {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 2px 2px black;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__nav__div {
+    height: auto;
+  }
+  .header__nav__desk__list {
+    list-style: none;
+  }
+  .header__nav__mobile {
+    display: none;
+  }
+  .header__logo {
+    right: 3%;
+  }
+  .header__item, .header__nav__desk__item {
+    position: relative;
+    margin: 1.5rem;
+  }
+  .header__nav__desk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10rem;
+  }
+  .header__logo:hover {
+    color: #fff;
+    -webkit-animation: rotar 0.4s ease-in-out;
+            animation: rotar 0.4s ease-in-out;
+  }
+  @-webkit-keyframes rotar {
+    0% {
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    50% {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @keyframes rotar {
+    0% {
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    50% {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+}
+
+.footer {
+  height: 13rem;
+  background-color: #2b2b33;
+}
+
+.main--secciones {
+  min-height: calc(100vh - 23rem);
+}
+
+.main__trabajos__titulo {
+  background-color: #2b2b33;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.main__equipo {
+  min-height: 40rem;
+}
+
+.main__slider {
+  width: 90%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.main__contacto__form {
+  width: 95%;
+}
+
+@media screen and (min-width: 320px) {
+  .main__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__contacto__form {
+    width: 130%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__slider {
+    width: 75%;
+  }
+  .main__contacto__form {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,50 @@
+@import "./variables";
+
+.main--secciones{
+    min-height: calc(100vh - 23rem);
+}
+
+.main__trabajos__titulo{
+    background-color: $bgDark;
+    color: $colorBlanco;
+    border-radius: 10px;
+}
+
+.main__equipo{
+    min-height: 40rem;
+}
+.main__slider{
+    width: 90%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.main__contacto__form{
+    width: 95%;
+}
+
+@media  screen and (min-width: 320px) {
+
+    .main__card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__contacto__form{
+        width: 130%;
+    }
+    
+}
+
+@media screen and (min-width: 1024px){
+
+    .main__slider{
+        width: 75%;
+    }
+
+    .main__contacto__form{
+        width: 60%;
+    }
+    
+}

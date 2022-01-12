@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    width: 0.4rem;
+    background-color: rgba(245, 171, 86, 0.664);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(170, 137, 99);
+    border-radius: 0.7rem;   
+}
