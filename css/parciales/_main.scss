@@ -1,3 +1,5 @@
+@import "./utilidades";
+
 .main{
     min-height: 120vh;
     background-color: rgb(43, 43, 51);
@@ -5,17 +7,13 @@
     overflow-x: hidden;
 
     &__tituloTrabajos{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include superCentro;
         height: 10rem;
         margin-bottom: 3rem;
     }
     
     &__trabajos__varios, &__trabajos__armarios, &__trabajos__cocinas{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include superCentro;
         height: 9rem;
         border: solid 1px $borde-sombraGris;
         box-shadow: 2px 2px 2px $borde-sombraGris;
@@ -42,9 +40,7 @@
     }
     
     &__trabajos__link{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include superCentro;
         text-decoration: none;
         color: $colorBlanco;
         font-size: 2rem;
@@ -62,6 +58,18 @@
     &__historia--index{
         height: 40rem;
         margin-top: 5rem;
+
+        &__span{
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: $textResaltado;
+
+            &:hover{
+                text-decoration: underline;
+                color: $textResaltado;
+            }
+        }
     }
     
     &__card__texto{
@@ -82,8 +90,6 @@
 @media  screen and (min-width: 320px) {
 
     .main__card{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include superCentro;
     }    
 }

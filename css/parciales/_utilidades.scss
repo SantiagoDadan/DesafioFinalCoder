@@ -1,0 +1,19 @@
+@keyframes rotar {
+    0% {transform: rotateY(0deg);}
+    50% {transform: rotateY(180deg);}
+    100% {transform: rotateY(360deg);}
+}
+
+@keyframes salta {
+    0% {bottom: 5%;}
+    50% {bottom: 7%;}
+    100%{bottom: 5%;}
+}
+
+@mixin superCentro {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

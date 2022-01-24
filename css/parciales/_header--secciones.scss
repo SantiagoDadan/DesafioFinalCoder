@@ -1,64 +1,63 @@
-.header--secciones{
-    position: relative;
-    height: 10rem;
-    overflow-x: hidden;
-    background-color: $bgDark;
-    font-family: 'Cinzel', serif;
-}
+@import "./utilidades";
 
-.header__nav__div{
-    height: 100%;
-}
+.header{
 
-.header__logo{
-    position: absolute;
-    top: 25%;
-    right: 10%;
-    text-decoration: none;
-    color: $colorBlanco;
-    font-size: 3rem;
-    text-shadow: $sombraTexto;
+    &--secciones{
+        position: relative;
+        height: 10rem;
+        overflow-x: hidden;
+        background-color: $bgDark;
+        font-family: 'Cinzel', serif;
+    }
+    
+    &__nav__div{
+        height: 100%;
+    }
+    
+    &__logo{
+        position: absolute;
+        top: 25%;
+        right: 10%;
+        text-decoration: none;
+        color: $colorBlanco;
+        font-size: 3rem;
+        text-shadow: $sombraTexto;
+    }
 }
 
 @media screen and (min-width: 1024px){
 
-    .header__nav__div{
-        height: auto;
-    }
-
-    .header__nav__desk__list{
-        list-style: none;
-    }
-
-    .header__nav__mobile{
-        display: none;
-    }
-
-    .header__logo{
-        right: 3%;
-    }
-
-    .header__item, .header__nav__desk__item{
-        position: relative;
-        margin: 1.5rem;
-    }
-
-    .header__nav__desk{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10rem;
-    }
-
-    .header__logo:hover{
-        color: $colorBlanco;
-	    animation: rotar 0.4s ease-in-out;
-    }
-
-    @keyframes rotar {
-        0% {transform: rotateY(0deg);}
-        50% {transform: rotateY(180deg);}
-        100% {transform: rotateY(360deg);}
-    }
+    .header{
+        
+        &__nav__div{
+            height: auto;
+        }
     
+        &__nav__desk__list{
+            list-style: none;
+        }
+    
+        &__nav__mobile{
+            display: none;
+        }
+    
+        &__logo{
+            right: 3%;
+        }
+    
+        &__item, &__nav__desk__item{
+            position: relative;
+            margin: 1.5rem;
+        }
+    
+        &__nav__desk{
+            @include superCentro;
+            height: 10rem;
+        }
+    
+        &__logo:hover{
+            color: $colorBlanco;
+            animation: rotar 0.4s ease-in-out;
+        }
+    }
 }

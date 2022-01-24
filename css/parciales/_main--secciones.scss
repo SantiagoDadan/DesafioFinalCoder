@@ -1,50 +1,119 @@
 @import "./variables";
+@import "./utilidades";
 
 .main--secciones{
     min-height: calc(100vh - 23rem);
 }
 
-.main__trabajos__titulo{
-    background-color: $bgDark;
-    color: $colorBlanco;
-    border-radius: 10px;
+.main{
+
+    &__trabajos{
+
+        &__titulo{
+            background-color: $bgDark;
+            color: $colorBlanco;
+            border-radius: 10px;
+        }
+
+        &__irA{
+            width: 10rem;
+            height: 3rem;
+            margin-bottom: 3rem;
+            background-color: $bgDark;
+            border-radius: 30px;
+            transition: 0.2s ease;
+
+            &:hover{
+                transform: scale(1.2);
+                color: $colorBlanco;
+            }
+
+            &__link{
+                text-decoration: none;
+                color: $colorBlanco;
+                
+                &:hover{
+                    color: $colorBlanco;
+                }
+            }
+        }
+    }
+
+    
+    &__equipo{
+        min-height: 40rem;
+
+        &__tarjeta{
+            min-height: 33rem;
+        }
+    }
+    &__slider{
+        width: 90%;
+        height: 70%;
+        overflow: hidden;
+    }
+    
+    &__contacto__form{
+        width: 95%;
+    }
+
+    &__historia{
+        margin: 2rem auto 3rem auto;
+        &__titulo{
+            background-color: $bgDark;
+            color: $colorBlanco;
+            border-radius: 15px;
+        }
+
+        &__fam{
+            @include superCentro;
+
+            &__img{
+                max-width: 90%;
+                border-radius: 10%;
+                background-color: $bgDark;
+                border: solid $bgDark 5px;
+            }
+        }
+
+    }    
 }
 
-.main__equipo{
-    min-height: 40rem;
-}
-.main__slider{
-    width: 90%;
-    height: 70%;
-    overflow: hidden;
-}
-
-.main__contacto__form{
-    width: 95%;
-}
 
 @media  screen and (min-width: 320px) {
 
-    .main__card{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    .main{
 
-    .main__contacto__form{
-        width: 130%;
+        &__card{
+            @include superCentro;
+        }
+    
+        &__contacto__form{
+            width: 130%;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 425px){
+
+    .main__historia__fam{
+        max-width: 20rem;
     }
     
 }
 
 @media screen and (min-width: 1024px){
 
-    .main__slider{
-        width: 75%;
-    }
+    .main{
 
-    .main__contacto__form{
-        width: 60%;
+        &__slider{
+            width: 75%;
+        }
+    
+        &__contacto__form{
+            width: 60%;
+        }
     }
     
 }
