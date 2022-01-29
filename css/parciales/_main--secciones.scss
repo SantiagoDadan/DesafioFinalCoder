@@ -2,7 +2,9 @@
 @import "./utilidades";
 
 .main--secciones{
-    min-height: calc(100vh - 23rem);
+    min-height: calc(100vh - 22rem);
+    background: rgb(209,208,208);
+    background: linear-gradient(90deg, rgba(209,208,208,1) 0%, rgba(255,255,255,1) 50%, rgba(209,208,208,1) 100%);
 }
 
 .main{
@@ -58,7 +60,9 @@
     }
 
     &__historia{
-        margin: 2rem auto 3rem auto;
+        
+        height: auto;
+        padding: 5rem;
         &__titulo{
             background-color: $bgDark;
             color: $colorBlanco;
@@ -106,6 +110,10 @@
 @media screen and (min-width: 1024px){
 
     .main{
+
+        &--secciones{
+            min-height: calc(100vh - 20rem);
+        }
 
         &__slider{
             width: 75%;

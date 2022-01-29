@@ -3,13 +3,13 @@
     padding: 2rem;
     background-image: url(../media/madera.jpeg);
     background-size: cover;
-    background-position-y: 35%;
-    color: $colorBlanco;
+    background-position-y: 35%; 
     font-size: 1.34rem;
-    text-shadow: $sombraTexto;
     
     .footer--index__datos{
         margin-top: 3rem;
+        color: $colorBlanco;
+        text-shadow: $sombraTexto;
     }
 }
 

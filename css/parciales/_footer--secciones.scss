@@ -1,4 +1,18 @@
 .footer{
     height: 13rem;
-    background-color: $bgDark;
+    background-color: $bgLigth;
+    box-shadow: 5px 5px 5px 5px $borde-sombraGris;
+
+    &__info{
+        color: $bgDark;
+        text-shadow: $sombraTextoWhite;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .footer{
+        height: 11rem;
+    }
+    
 }

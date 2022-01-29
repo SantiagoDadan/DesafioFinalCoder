@@ -105,7 +105,7 @@
             right: 3%;
         }
     
-        &__item, &__nav__desk__item{
+        &__nav__desk__item,  &__nav__desk__item--seccion{
             position: relative;
             margin: 1.5rem;
         }
@@ -115,7 +115,7 @@
             height: 10rem;
         }
         
-        &__item::before, &__nav__desk__item::before{
+        &__nav__desk__item::before, &__nav__desk__item--seccion::before{
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -127,13 +127,13 @@
             transition: all 0.2s;
         }
     
-        &__item:hover::before, &__nav__desk__item:hover::before{
+        &__nav__desk__item:hover::before, &__nav__desk__item--seccion:hover::before{
             left: 0;
             width: 100%;
         }
     
         &__logo--index:hover{
-            color: $colorBlanco;
+            color: $bgDark;
             animation: rotar 0.4s ease-in-out;
         }   
     }

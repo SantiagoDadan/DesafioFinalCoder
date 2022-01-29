@@ -4,10 +4,16 @@
 
     &--secciones{
         position: relative;
-        height: 10rem;
+        height: 9rem;
         overflow-x: hidden;
-        background-color: $bgDark;
+        background-color: $bgLigth;
         font-family: 'Cinzel', serif;
+        box-shadow: 2px 2px 2px $borde-sombraGris;
+        overflow: hidden;
+    }
+
+    &__nav__desk__link{
+        color: $bgDark;
     }
     
     &__nav__div{
@@ -16,18 +22,23 @@
     
     &__logo{
         position: absolute;
+        width: 6rem;
         top: 25%;
         right: 10%;
         text-decoration: none;
-        color: $colorBlanco;
+        color: $bgDark;
         font-size: 3rem;
-        text-shadow: $sombraTexto;
+        text-shadow: $sombraTextoWhite;
     }
 }
 
 @media screen and (min-width: 1024px){
 
     .header{
+
+        &__nav__desk__link{
+            text-shadow: $sombraTextoWhite;
+        }
         
         &__nav__div{
             height: auto;
@@ -42,22 +53,49 @@
         }
     
         &__logo{
-            right: 3%;
+            left: 10%;
         }
-    
-        &__item, &__nav__desk__item{
-            position: relative;
-            margin: 1.5rem;
-        }
-    
+
         &__nav__desk{
             @include superCentro;
             height: 10rem;
         }
     
         &__logo:hover{
-            color: $colorBlanco;
+            color: $bgDark;
             animation: rotar 0.4s ease-in-out;
         }
+
+        &__nav__desk__item--seccion--home{
+            @include superCentro;
+            background-color: $bgDark;
+            width: 8rem;
+            height: 2.5rem;
+            border-radius: 25px;
+            transition: 0.2s ease;
+
+            &:hover{
+                transform: scale(1.15);
+            }
+        }
+        &__nav__desk__link{
+
+            &:hover{
+                color: $bgDark;
+            }
+
+            &--home{
+                color: $colorBlanco;
+    
+                &:hover{
+                    color: $colorBlanco;
+                }
+            }
+        }
+
+        &__nav__desk__item--seccion::before{
+            background-color: $bgDark;
+        }
+    
     }
 }
