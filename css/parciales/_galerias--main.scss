@@ -1,0 +1,140 @@
+@import "./variables";
+@import "./utilidades";
+
+.main__galeria{
+    min-height: calc(100vh - 22rem);
+
+    &__contenedor{
+        width: 100%;
+        margin-top: 5rem;
+    }
+    
+    &__img{
+        margin: 0.3rem;
+        max-width: 270px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 2px $borde-sombraGris;
+        outline: 0px solid $bgDark;
+        transition: .2s ease;
+
+        &:hover{
+            outline: 7px solid $bgDark;
+            outline-offset: -7px;
+        }
+    }
+}
+
+.lightBox{
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    width: 100%;
+    @include superCentro;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+
+    &:target{
+        transform: scale(1);
+    }
+
+    &__img{
+        width: 90vw;
+    }
+}
+
+.cerrar{
+    display: block;
+    position: absolute;
+    @include superCentro;
+    width: 3rem;
+    height: 3rem;
+    top: 20%;
+    right: auto;
+    left: auto;
+    background-color: $bgDark;
+    color: $colorBlanco;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+
+    &:hover{
+        color: $colorBlanco;
+    }
+}
+
+.flecha, .flecha-izq{
+    display: block;
+    position: absolute;
+    @include superCentro;
+    right: 20%;
+    bottom: 25%;
+    font-size: 2.5rem;
+    color: $colorBlanco;
+    background-color: $bgDark;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-weight: bolder;
+    text-decoration: none;
+
+    &:hover{
+        color: $colorBlanco;
+    }
+}
+
+.flecha-izq{
+    left: 20%;
+
+    &:hover{
+        color: $colorBlanco;
+    }
+}
+
+@media  screen and (min-width: 768px){
+    .cerrar{
+        top: 10%;
+    }
+
+    .flecha, .flecha-izq{
+        bottom: 10%;
+    }
+}
+
+@media  screen and (min-width: 1024px) {
+
+    .lightBox{
+    
+        &__img{
+            width: 60vw;
+        }
+    }
+
+    .flecha, .flecha-izq{
+        bottom: 50%;
+        right: 10%;
+    }
+
+    .flecha-izq{
+        left: 10%;
+    }
+}
+
+@media  screen and (min-width: 1440px){
+    .lightBox{
+    
+        &__img{
+            width: 40vw;
+        }
+    }
+
+    .flecha{
+        right: 20%;
+    }
+
+    .flecha-izq{
+        left: 20%;
+    }
+}

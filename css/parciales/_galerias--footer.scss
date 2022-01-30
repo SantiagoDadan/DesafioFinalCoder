@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./utilidades";
+
+.footer__galeria{
+    @include superCentro;
+    height: 5rem;
+
+    &__p{
+        font-size: 0.8rem;
+        font-weight: bolder;
+    }
+}

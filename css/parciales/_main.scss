@@ -1,8 +1,12 @@
+@import "./variables";
 @import "./utilidades";
+
+body{
+    background-color: $bgDark;
+}
 
 .main{
     min-height: calc(100vh - 18rem);
-    background-color: rgb(43, 43, 51);
     color: $colorBlanco;
     overflow-x: hidden;
 
